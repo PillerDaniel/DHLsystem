@@ -90,6 +90,7 @@ namespace DhlSystem.View
             if (operation == Op.Add && VehiclesComboBox.SelectedValue != "" && EmployeesComboBox.SelectedValue !="")
              {
                 selectedCarRepository.InsertSelectedCar(new SelectedCars(Convert.ToInt32(EmployeesComboBox.SelectedValue), Convert.ToInt32(VehiclesComboBox.SelectedValue)));
+                MessageBox.Show("Successful operation.");
                 selectedCarRepository.Save();
                 LoadSelectedCarsGrid();
                 operation = Op.No;
@@ -107,6 +108,7 @@ namespace DhlSystem.View
                 EmployeesComboBox.IsEnabled = true;
                 VehiclesComboBox.IsEnabled = true;
                 selectedCarRepository.DeleteSelectedCar(delete.Id);
+                MessageBox.Show("Successful operation.");
                 selectedCarRepository.Save();
                 LoadSelectedCarsGrid();
                 operation = Op.No;
@@ -125,6 +127,7 @@ namespace DhlSystem.View
                 VehiclesComboBox.IsEnabled = true;
                 update.CarId = Convert.ToInt32(VehiclesComboBox.SelectedValue);
                 update.DriverId = Convert.ToInt32(EmployeesComboBox.SelectedValue);
+                MessageBox.Show("Successful operation.");
                 selectedCarRepository.Save();
                 LoadSelectedCarsGrid();
                 operation = Op.No;
@@ -150,6 +153,9 @@ namespace DhlSystem.View
 
             if (selectedCars.Count != 0 && SelectedCarsGrid.SelectedIndex < selectedCars.Count)
             {
+                EmployeesComboBox.IsEnabled = true;
+                VehiclesComboBox.IsEnabled = true;
+
                 VehiclesComboBox.SelectedValue = selectedCars[SelectedCarsGrid.SelectedIndex].CarId;
                 EmployeesComboBox.SelectedValue = selectedCars[SelectedCarsGrid.SelectedIndex].DriverId;
                 operation = Op.Upd;
