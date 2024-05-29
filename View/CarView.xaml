@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="DhlSystem.View.CarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DhlSystem.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="DataGridColumnHeader" x:Key="DataGridColumnHeaderStyle">
+            <Setter Property="Background" Value="#23395d"/>
+            <Setter Property="Foreground" Value="#FFCC00"/>
+        </Style>
+        <Style TargetType="DataGridRow" x:Key="DataGridRowStyle">
+            <Setter Property="Background" Value="#23395d"/>
+            <Setter Property="Foreground" Value="#FFCC00"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#23395d">
+        <DataGrid x:Name="CarsGrid" ItemsSource="{Binding}" Margin="0,0,0,249" 
+            HeadersVisibility="Column"
+            MinColumnWidth="70"
+            CanUserResizeColumns="False"
+            VerticalScrollBarVisibility="Hidden"
+            MouseLeftButtonUp="DataGrind_MouseLeftButtonUp"
+            HorizontalGridLinesBrush="#FFCC00"
+            VerticalGridLinesBrush="#FFCC00"
+            BorderBrush="Transparent"
+            ColumnHeaderStyle="{StaticResource DataGridColumnHeaderStyle}"
+            RowStyle="{StaticResource DataGridRowStyle}"
+            Background="#23395d" Foreground="#FFCC00"
+            IsReadOnly="True"
+            CanUserAddRows="False"
+            SelectionUnit="FullRow"/>
+        <Button x:Name="btn_new" Content="New" HorizontalAlignment="Left" Margin="595,482,0,0" VerticalAlignment="Top" Height="50" Width="90" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00" Click="newClick"/>
+        <Button x:Name="btn_update" Content="Update" HorizontalAlignment="Left" Margin="595,542,0,0" VerticalAlignment="Top" Height="50" Width="90" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00" Click="updateClick"/>
+        <Button x:Name="btn_delete" Content="Delete" HorizontalAlignment="Left" Margin="595,602,0,0" VerticalAlignment="Top" Height="50" Width="90" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00" Click="deleteClick"/>
+        <Button x:Name="btn_save" Content="Save" HorizontalAlignment="Left" Margin="595,662,0,0" VerticalAlignment="Top" Height="50" Width="90" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00" Click="saveClick"/>
+        <TextBox x:Name="box_brand" HorizontalAlignment="Left" Margin="105,515,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="20" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00"/>
+        <TextBox x:Name="box_type" HorizontalAlignment="Left" Margin="105,555,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="20" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00"/>
+        <TextBox x:Name="box_plate" HorizontalAlignment="Left" Margin="105,595,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="20" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00"/>
+        <TextBox x:Name="box_km" HorizontalAlignment="Left" Margin="105,635,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="20" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00"/>
+        <Label Content="Km:" HorizontalAlignment="Left" Margin="76,631,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="#FFCC00"/>
+        <Label Content="Plate:" HorizontalAlignment="Left" Margin="68,591,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="#FFCC00"/>
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="68,551,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="#FFCC00"/>
+        <Label Content="Brand:" HorizontalAlignment="Left" Margin="64,511,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="#FFCC00"/>
+    </Grid>
+</UserControl>

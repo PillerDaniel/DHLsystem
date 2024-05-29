@@ -1,0 +1,17 @@
+﻿<Window x:Class="DhlSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DhlSystem"
+        mc:Ignorable="d"
+        Title="DHL System" Height="450" Width="800"
+        Icon="/images/dhl.ico"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid Background="#23395d">
+        <Label x:Name="lbl_title" Content="DHL administration system" HorizontalAlignment="Left" Margin="105,84,0,0" VerticalAlignment="Top" Width="585" FontSize="45" FontWeight="Bold" Foreground="#FFCC00"/>
+        <Button x:Name="btn_exit" Content="Exit" Margin="574,333,0,0" Click="btn_exit_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="180" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00"/>
+        <Button x:Name="btn_login" Content="Login" Margin="0,333,574,0" VerticalAlignment="Top" Height="60" Click="btn_login_Click" HorizontalAlignment="Right" Width="180" Background="#152238" Foreground="#FFCC00" BorderBrush="#FFCC00"/>
+    </Grid>
+</Window>

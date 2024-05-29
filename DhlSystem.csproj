@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\delivery-van-icon.ico" />
+    <None Remove="images\dhl.ico" />
+    <None Remove="images\employee-icon.ico" />
+    <None Remove="images\home.ico" />
+    <None Remove="images\homepic.jpg" />
+    <None Remove="images\logout-icon.ico" />
+    <None Remove="images\selectedVehicles.ico" />
+    <None Remove="images\usericon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />
+    <PackageReference Include="MySql.Data" Version="8.4.0" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\delivery-van-icon.ico" />
+    <Resource Include="images\dhl.ico" />
+    <Resource Include="images\employee-icon.ico" />
+    <Resource Include="images\home.ico" />
+    <Resource Include="images\homepic.jpg" />
+    <Resource Include="images\logout-icon.ico" />
+    <Resource Include="images\selectedVehicles.ico" />
+    <Resource Include="images\usericon.ico" />
+  </ItemGroup>
+
+</Project>
